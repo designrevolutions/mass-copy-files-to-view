@@ -4,6 +4,41 @@ A small Bash CLI tool to collect useful files from a directory and organise them
 
 ---
 
+## Quick Start
+
+Make the script executable:
+
+```bash
+chmod +x copy_into_batches.sh
+```
+
+Run it:
+
+### Example 1 – Use defaults
+
+```bash
+./copy_into_batches.sh
+```
+
+### Example 2 – Custom source and destination
+
+```bash
+./copy_into_batches.sh \
+  --source "/media/drive" \
+  --dest "$HOME/output"
+```
+
+### Example 3 – Smaller batch size + quiet mode
+
+```bash
+./copy_into_batches.sh \
+  --source "/media/drive" \
+  --batch-size 500 \
+  --quiet
+```
+
+---
+
 ## Why this exists
 
 When preparing to wipe or reuse a drive, important files are often scattered across many directories.
@@ -88,42 +123,6 @@ alias fd=fdfind
 | `--quiet`            | Disable verbose output                                        |
 | `--no-backup`        | Disable duplicate-safe naming                                 |
 | `--help`             | Show help                                                     |
-
----
-
-## Examples
-
-### Use defaults
-
-```bash
-./copy_into_batches.sh
-```
-
----
-
-### Custom source and destination
-
-```bash
-./copy_into_batches.sh \
-  --source "/media/drive" \
-  --dest "$HOME/output"
-```
-
----
-
-### Smaller batch size
-
-```bash
-./copy_into_batches.sh --batch-size 500
-```
-
----
-
-### Quiet mode
-
-```bash
-./copy_into_batches.sh --quiet
-```
 
 ---
 
