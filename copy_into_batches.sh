@@ -52,6 +52,7 @@ EOF
 # ARG PARSING
 ############################################
 
+# Parse command-line options and override default configuration values
 SOURCE_DIRECTORY="$DEFAULT_SOURCE_DIRECTORY"
 DESTINATION_DIRECTORY="$DEFAULT_DESTINATION_DIRECTORY"
 BATCH_SIZE="$DEFAULT_BATCH_SIZE"
